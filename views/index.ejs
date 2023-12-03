@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Book Notes</title>
+</head>
+<body>
+    <main>
+        <h1>SANJAY KUMAR</h1>
+        <h3>BOOKS I'VE READ</h3>
+        <p>Tiny summary but detailed notes for each. Use the ISBN number to find it from your local library or anywhere else. This page will constantly update as I read more, so bookmark it if you want to check back in a few months. <br>
+            Sorted with my top recommendations up top. <br>
+            Sort by title, newest, or best. <br>
+            And please read this FAQ page about these notes, if you have any questions. You can also email me.
+        </p>
+        <div class="book-list">
+            <% data.forEach((item) => { %>
+                <div class="each-book">
+                    <img <% if (item.id % 2 == 0) { %> style="float: right; margin: 0 0 20px 30px" <% } %> class="index-img" src="https://covers.openlibrary.org/b/isbn/<%= item.isbn %>-M.jpg" />
+                    <h1><a href="/book?id=<%= item.id %>"><%= item.title %></a></h1>
+                    <div class="span-container">
+                        <span>How strongly I recommend it: <%= item.rating %>/10</span>
+                        <span>Date Read: <%= item.date_only %></span>
+                    </div>
+                    <p><%= item.summary %></p>
+                </div>
+            <% }); %>
+        </div>
+    </main>
+</body>
+</html>

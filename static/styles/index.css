@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    padding: 10vh 0 10vh 0;
+    background: #222831;
+}
+
+main {
+    width: 60%;
+}
+
+h1 {
+    font-size: 40px;
+    color: #00ADB5;
+}
+
+a {
+    text-decoration: none;
+    color: #00ADB5;
+}
+
+a:hover {
+    color: gray;
+}
+
+h3 {
+    font-size: 25px;
+    color: #00ADB5;
+}
+
+p {
+    font-size: 20px;
+    color: #EEEEEE;
+    margin: 10px;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    float: left;
+    margin: 0 30px 20px 0;
+}
+
+.img-container {
+    padding: 2vh 0 0 0;
+}
+
+.span-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+}
